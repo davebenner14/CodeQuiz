@@ -1,12 +1,6 @@
-type QuizQuestion = {
-    category: string,
-    question: string,
-    options: { [key: string]: string },
-    correctAnswer: string,
-    explanation: string
-};
+// main.ts
 
-const quizData: QuizQuestion[] = [/* Your quizData.json content here */];
+import { quizData, QuizQuestion } from './quizData';
 
 document.addEventListener('DOMContentLoaded', () => {
     displayQuestion(quizData[0]); // Simplified: displaying the first question
@@ -27,3 +21,8 @@ function displayQuestion(question: QuizQuestion): void {
     // Remember to implement selectOption function to handle option selection
 }
 
+// Example implementation of selectOption
+function selectOption(selectedKey: string): void {
+    console.log(`Option selected: ${selectedKey}`);
+    // Additional logic to check the answer, display explanations, etc.
+}
